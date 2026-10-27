@@ -216,7 +216,7 @@ def download_pdf(session_id: str, item_id: str):
         pdf_path,
         media_type="application/pdf",
         filename=filename,
-        headers={"Content-Disposition": f'attachment; filename="{filename}"'}
+        content_disposition_type="attachment"
     )
 
 @app.get("/api/download_all/{session_id}")
